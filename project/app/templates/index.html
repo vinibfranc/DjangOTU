@@ -3,11 +3,10 @@
 {% load static %}
 {% block content %}
 
-<!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron">
     <div class="container">
         <h1 class="display-3">DjangOTU</h1>
-        <p></p>
+        <p>Esse projeto é um teste para vaga na Neoprospecta, incluindo exibição e filtragem do conteúdo de uma OTU table resultante de dados sequenciamento do marcador 16s de camundongos, objetivando investigar as variações na microbiota intestinal em diferentes dias após o desmame dos animais.</p>
         <p><a class="btn btn-primary btn-lg" href="https://github.com/vinibfranc/DjangOTU" role="button">Saiba mais »</a></p>
     </div>
 </div>
@@ -15,12 +14,16 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h2>Visualização de OTU table</h2>
-            <p>A partir de uma OTU table, o framework Django é usado para exibir o conteúdo desta tabela e realizar filtragens</p>
-            <!--<p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>-->
+            <h2>Análise de microbioma e diagnósticos precisos</h2>
+            <p>O diagnóstico microbiológico digital é um método que, por meio da análise de DNA, permite que sejam realizadas análises de microbioma e identificação com alta sensibilidade de agentes patogênicos ou micro-organismos deteriorantes em amostras complexas.</p>
+            <div class="text-center">
+                <img src="{% static 'img/microbioma.png' %}" width="50%" class="rounded">
+            </div>
+            <p>Confira a nossa solução para ordenamento de OTU tables!</p>
+            <p><a class="btn btn-primary btn-lg" href="{% url 'otu_table' %}" role="button">OTU tables »</a></p>
         </div>
     </div>
     <hr>
-</div> <!-- /container -->
+</div>
 
 {% endblock %}

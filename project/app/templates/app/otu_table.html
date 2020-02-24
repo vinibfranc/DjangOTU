@@ -1,27 +1,58 @@
 {% extends "base.html" %}
 {% block titulo %}DjangOTU{% endblock %}
 {% load static %}
+
 {% block content %}
 
-<!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron">
     <div class="container">
-        <h1 class="display-3">DjangOTU</h1>
-        <p></p>
+        <h1 class="display-3">Visualização de OTU table</h1>
+        <p>A partir de uma OTU table, o framework Django e o JavaScript são usados para exibir o conteúdo desta tabela e realizar filtragens.</p>
+        <p>Para executar filtragens, basta clicar na coluna de interesse. Para múltiplas filtragens, segurar a tecla Shift antes de clicar nas colunas.</p>
         <p><a class="btn btn-primary btn-lg" href="https://github.com/vinibfranc/DjangOTU" role="button">Saiba mais »</a></p>
     </div>
 </div>
 
 <div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h2>Visualização de OTU table</h2>
-            <p>A partir de uma OTU table, o framework Django é usado para exibir o conteúdo desta tabela e realizar filtragens</p>
-            <p>Oi</p>
-            <!--<p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>-->
+    <div class="card">
+        <div class="card-body">
+            <table class="table table-sm table-bordered table-striped table-hover table-responsive" id="myTable" width="100%" cellspacing="0">
+                <thead class="thead-dark">
+                    <tr>
+                        {% for col in columns %}
+                            <th>{{ col }}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in rows %}
+                        <tr>
+                        <td class="table-dark">{{row.OTU}}</td>
+                        <td>{{row.F3D000}}</td>
+                        <td>{{row.F3D001}}</td>
+                        <td>{{row.F3D002}}</td>
+                        <td>{{row.F3D003}}</td>
+                        <td>{{row.F3D005}}</td>
+                        <td>{{row.F3D006}}</td>
+                        <td>{{row.F3D007}}</td>
+                        <td>{{row.F3D008}}</td>
+                        <td>{{row.F3D009}}</td>
+                        <td>{{row.F3D141}}</td>
+                        <td>{{row.F3D142}}</td>
+                        <td>{{row.F3D143}}</td>
+                        <td>{{row.F3D144}}</td>
+                        <td>{{row.F3D145}}</td>
+                        <td>{{row.F3D146}}</td>
+                        <td>{{row.F3D147}}</td>
+                        <td>{{row.F3D148}}</td>
+                        <td>{{row.F3D149}}</td>
+                        <td>{{row.F3D150}}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
         </div>
     </div>
-    <hr>
-</div> <!-- /container -->
+</div>
 
 {% endblock %}
