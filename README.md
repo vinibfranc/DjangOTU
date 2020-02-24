@@ -1,6 +1,6 @@
 # DjangOTU
 
-Esse projeto é um teste para vaga na Neoprospecta, incluindo exibição e filtragem do conteúdo de uma OTU table resultante de dados sequenciamento do marcador 16s de camundongos, objetivando investigar as variações na microbiota intestinal em diferentes dias após o desmame dos animais.
+Esse projeto é um teste para vaga na Neoprospecta, incluindo exibição e filtragem do conteúdo de uma OTU table resultante de dados sequenciamento do marcador de bactérias 16s em amostras de fezes de camundongos, objetivando investigar as variações na microbiota intestinal em diferentes dias após o desmame dos animais.
 
 ---------------------------------------
 
