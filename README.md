@@ -13,7 +13,7 @@ Para a etapa 3 deste desafio foram utilizadas as seguintes linguagens de program
 - [CSS3](https://developer.mozilla.org/pt-BR/docs/Archive/CSS3)
 - [Java Script](https://www.javascript.com/)
 - [Bootstrap](https://getbootstrap.com/) (v. 4.4)
-- [DataTables](https://datatables.net/) (v1.10.20)
+- [DataTables.js](https://datatables.net/) (v1.10.20)
 
 ## Execução local do site 
 
@@ -46,7 +46,7 @@ $ cd DjangOTU/
 $ pip3 install virtualenv
 ```
 
-Com isso, podemos verificar onde o Python foi instalado para fazer a virtualenv apontar para eles:
+Com isso, podemos verificar onde o Python foi instalado para fazer a virtualenv apontar para ele:
 
 ```
 $ which python3
@@ -66,7 +66,7 @@ Finalmente, podemos criar a nossa virtualenv para o projeto, passando como parâ
 $ virtualenv . -p /usr/bin/python3
 ```
 
-O último passo agora, e sempre que formos trabalhar no projeto, é voltar para a pasta ```DjangOTU``` e ativar a virtualenv:
+O último passo agora, e sempre que formos trabalhar no projeto, é voltar para a pasta raiz do projeto (```DjangOTU/```) e ativar a virtualenv:
 
 ```
 $ cd ..
@@ -85,7 +85,7 @@ Pronto! Todas as configurações foram feitas e o site já pode ser acessado.
 
 ## Navegação no site
 
-Para iniciar a aplicação, navegamos para a pasta do projeto e rodamos o comando:
+Para iniciar a aplicação, navegamos para a pasta do projeto e rodamos o comando para rodar o servidor:
 
 ```
 (venv) $ cd project
@@ -96,7 +96,7 @@ Podemos abrir esse site no browser no endereço [http://127.0.0.1:8000/](http://
 
 Ao abrir a página teremos uma página Home, feita essencialmente com HTML e Bootstrap, justamente para dar uma visão geral sobre o propósito deste site. 
 
-Em seguida, podemos acessar a nossa OTU table. Ao clicar no segundo link do menu, somos direcionados para a página do Django admin, pois ainda não estamos logados.
+Em seguida, podemos acessar a nossa OTU table. Ao clicar no segundo link do menu, somos redirecionados para a página do Django admin, pois ainda não estamos logados.
 
 Conforme solicitado, há um usuário criado com as seguintes credenciais:
 
@@ -107,7 +107,7 @@ senha: neopct1234
 
 Ao logar com esse usuário, por padrão somos direcionados ao nosso perfil na área administrativa do Django. Para voltar à OTU table, podemos acessar a URL [http://127.0.0.1:8000/otu_table/](http://127.0.0.1:8000/otu_table/), ou então reabrir a página inicial e clicar no link da OTU table. 
 
-Nessa tela, teremos acesso à OTU table, que foi carregada como uma tabela HTML em uma View do Django utilizando a biblioteca pandas. Em seguida essa tabela foi estilizada utilizando o Bootstrap 4. Finalmente, foi utilizado um plugin para a biblioteca do Jquery, chamado DataTables.js, para permitir a exibição da quantidade de linhas desejadas pelo usuário, a paginação dos dados, a pesquisa de OTUs específicas, bem como a ordenação dos dados por OTUs e frequências. Para fazer as filtragens, basta clicar na coluna ao qual você deseja ordenar. Caso queira ordenar múltiplas colunas de uma só vez, segura a tecla Shift e clicar sobre as colunas de interesse.
+Nessa tela, teremos acesso à OTU table, um arquivo TSV que pode ser encontrado em: ```project/app/files/otu_table_tax_amostras_editada.tsv```, o qual foi carregado como uma tabela HTML em uma View do Django utilizando a biblioteca pandas. Em seguida essa tabela foi estilizada utilizando o Bootstrap 4. Finalmente, foi utilizado um plugin para a biblioteca do Jquery, chamado DataTables.js, para permitir a exibição da quantidade de linhas desejadas pelo usuário, a paginação dos dados, a pesquisa de OTUs específicas, bem como a ordenação dos dados por OTUs e frequências nas amostras. Para fazer as filtragens, basta clicar na coluna ao qual você deseja ordenar. Caso queira ordenar múltiplas colunas de uma só vez, segure a tecla Shift e clique sobre as colunas de interesse.
 
 ## Autor
 
